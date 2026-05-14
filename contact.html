@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Aswin Jay — Founder & CEO of JAY TECH SOLUTIONS. Reach out for collaborations, opportunities, or just to connect.">
+  <meta property="og:title" content="Contact | Aswin Jay">
+  <meta property="og:description" content="Get in touch with Aswin Jay — Founder & CEO at JAY TECH SOLUTIONS.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231a8a7a'/><text x='16' y='22' text-anchor='middle' fill='white' font-size='17' font-weight='bold' font-family='sans-serif'>AJ</text></svg>">
+  <title>Contact | Aswin Jay</title>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    .contact-card {
+      background: var(--bg-card);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      border: 1px solid var(--border-card);
+    }
+    .contact-card h2 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+    .contact-card .desc {
+      color: var(--text-muted);
+      font-size: 0.93rem;
+      margin-bottom: 2rem;
+    }
+
+    .info-block {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .info-block .icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius);
+      background: var(--primary-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .info-block h4 { font-size: 0.9rem; color: var(--text); }
+    .info-block .info-value {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .info-block .copy-btn {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.15rem 0.4rem;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    .info-block .copy-btn:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+    .info-block .copy-btn.copied {
+      border-color: var(--primary);
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .social-links {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .social-links a {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.8rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      transition: all var(--transition);
+    }
+    .social-links a:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      background: var(--primary-light);
+    }
+    .social-links a i {
+      font-size: 1.1rem;
+      width: 20px;
+      text-align: center;
+    }
+
+    .contact-form label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.3rem;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      color: var(--text);
+      background: var(--bg);
+      margin-bottom: 1.2rem;
+      outline: none;
+      transition: border var(--transition), box-shadow var(--transition), background var(--transition);
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(26,138,122,0.1);
+      background: var(--bg-card);
+    }
+    .contact-form input.error,
+    .contact-form textarea.error {
+      border-color: #e53e3e;
+    }
+    .contact-form textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+    .contact-form .btn-primary {
+      width: 100%;
+      justify-content: center;
+      padding: 0.9rem;
+    }
+    .contact-form .field-error {
+      color: #e53e3e;
+      font-size: 0.8rem;
+      margin-top: -1rem;
+      margin-bottom: 0.8rem;
+      display: none;
+    }
+    .contact-form .field-error.visible {
+      display: block;
+    }
+
+    .map-box {
+      background: var(--primary-light);
+      border-radius: var(--radius);
+      padding: 2rem;
+      text-align: center;
+      margin-top: 2rem;
+      border: 1px solid var(--border);
+    }
+    .map-box i { font-size: 2rem; color: var(--primary); margin-bottom: 0.5rem; }
+    .map-box p { color: var(--text-muted); font-size: 0.9rem; }
+
+    @media (max-width: 768px) {
+      .contact-section { grid-template-columns: 1fr; }
+      .social-links { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<nav role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="logo">Aswin <span>Jay</span></a>
+  <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+    <i class="fas fa-bars"></i>
+  </button>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="resume.html">Resume</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+    <li><button class="theme-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button></li>
+  </ul>
+</nav>
+
+<main id="main-content">
+<section class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Contact</div>
+    <h1>Get In <span>Touch</span></h1>
+    <p style="color:var(--text-muted);margin-top:0.5rem;">Have a question, collaboration idea, or just want to connect? I'd love to hear from you.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="contact-section">
+      <div class="contact-card fade-in">
+        <h2>Contact Information</h2>
+        <p class="desc">Here's how you can reach me. I'm always open to discussing new projects, ideas, or opportunities.</p>
+
+        <div class="info-block">
+          <div class="icon-box"><i class="fas fa-envelope"></i></div>
+          <div>
+            <h4>Email</h4>
+            <div class="info-value">
+              <span id="email-text">contact@jaytechsoln.in</span>
+              <button class="copy-btn" data-copy="contact@jaytechsoln.in" aria-label="Copy email"><i class="fas fa-copy"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-block">
+          <div class="icon-box"><i class="fas fa-phone"></i></div>
+          <div>
+            <h4>Phone</h4>
+            <div class="info-value">
+              <span>9003368894</span>
+              <button class="copy-btn" data-copy="9003368894" aria-label="Copy phone"><i class="fas fa-copy"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-block">
+          <div class="icon-box"><i class="fas fa-map-marker-alt"></i></div>
+          <div>
+            <h4>Location</h4>
+            <div class="info-value">Kadayanallur, Tenkasi District, Tamil Nadu — 627806</div>
+          </div>
+        </div>
+
+        <div class="info-block">
+          <div class="icon-box"><i class="fas fa-globe"></i></div>
+          <div>
+            <h4>Website</h4>
+            <div class="info-value">jaytechsoln.in</div>
+          </div>
+        </div>
+
+        <h3 style="font-size:1rem;margin:2rem 0 0.8rem;color:var(--text);">Connect on Social Media</h3>
+        <div class="social-links">
+          <a href="https://linkedin.com/in/aswinjay-m-543ba0390" target="_blank"><i class="fab fa-linkedin-in" style="color:#0a66c2;"></i> LinkedIn</a>
+          <a href="https://github.com/Aswinajay" target="_blank"><i class="fab fa-github"></i> GitHub (Aswinajay)</a>
+          <a href="https://github.com/aswinjayaji" target="_blank"><i class="fab fa-github"></i> GitHub (aswinjayaji)</a>
+          <a href="https://jaytechsoln.in" target="_blank"><i class="fas fa-globe" style="color:var(--primary);"></i> JAY TECH SOLUTIONS</a>
+        </div>
+      </div>
+
+      <div class="contact-card fade-in">
+        <h2>Send a Message</h2>
+        <p class="desc">Fill out the form below and I'll get back to you as soon as possible.</p>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="John Doe" required autocomplete="name">
+          <div class="field-error" id="nameError">Please enter your name.</div>
+
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" placeholder="john@example.com" required autocomplete="email">
+          <div class="field-error" id="emailError">Please enter a valid email address.</div>
+
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="What's this about?" autocomplete="organization">
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell me about your project, idea, or just say hi..." required></textarea>
+          <div class="field-error" id="messageError">Please enter your message.</div>
+
+          <button type="submit" class="btn btn-primary" id="submitBtn"><i class="fas fa-paper-plane"></i> Send Message</button>
+          <div id="formStatus" style="margin-top:0.8rem;font-size:0.88rem;display:none;"></div>
+        </form>
+      </div>
+    </div>
+
+    <div class="map-box fade-in">
+      <i class="fas fa-map-marked-alt"></i>
+      <p><strong>Based in Kadayanallur, Tenkasi District, Tamil Nadu</strong><br>Available for remote collaboration worldwide.</p>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="page-nav">
+    <a href="projects.html"><i class="fas fa-arrow-left"></i> Projects</a>
+    <a href="index.html">Back to Home <i class="fas fa-arrow-right"></i></a>
+  </div>
+</div>
+</main>
+
+<footer>
+  <p>&copy; 2026 Aswin Jay. Built with <i class="fas fa-heart" style="color:var(--primary);"></i> from Kadayanallur, Tamil Nadu.</p>
+</footer>
+
+<button class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var nav = document.querySelector('nav');
+  var menuBtn = document.querySelector('.menu-toggle');
+  var navUl = document.querySelector('nav ul');
+  var backBtn = document.querySelector('.back-to-top');
+  var themeBtn = document.querySelector('.theme-toggle');
+  var html = document.documentElement;
+
+  if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    html.setAttribute('data-theme', 'dark');
+    if (themeBtn) themeBtn.innerHTML = '<i class="fas fa-sun"></i>';
+  }
+  if (themeBtn) {
+    themeBtn.addEventListener('click', function() {
+      var isDark = html.getAttribute('data-theme') === 'dark';
+      html.setAttribute('data-theme', isDark ? '' : 'dark');
+      localStorage.setItem('theme', isDark ? '' : 'dark');
+      themeBtn.innerHTML = isDark ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+    });
+  }
+
+  window.addEventListener('scroll', function() {
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+    backBtn.classList.toggle('visible', window.scrollY > 400);
+  });
+  if (backBtn) backBtn.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  if (menuBtn) {
+    menuBtn.addEventListener('click', function() {
+      var isOpen = navUl.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', isOpen);
+      document.body.classList.toggle('nav-open', isOpen);
+    });
+  }
+  document.querySelectorAll('nav a:not(.theme-toggle)').forEach(function(link) {
+    link.addEventListener('click', function() {
+      navUl.classList.remove('open');
+      if (menuBtn) menuBtn.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('nav-open');
+    });
+  });
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right, .fade-in-scale, .stagger-children').forEach(function(el) { observer.observe(el); });
+
+  document.querySelectorAll('.copy-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var text = btn.getAttribute('data-copy');
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function() {
+          btn.classList.add('copied');
+          btn.innerHTML = '<i class="fas fa-check"></i>';
+          setTimeout(function() {
+            btn.classList.remove('copied');
+            btn.innerHTML = '<i class="fas fa-copy"></i>';
+          }, 2000);
+        });
+      }
+    });
+  });
+
+  var form = document.getElementById('contactForm');
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var name = document.getElementById('name');
+      var email = document.getElementById('email');
+      var message = document.getElementById('message');
+      var subject = document.getElementById('subject');
+      var status = document.getElementById('formStatus');
+      var submitBtn = document.getElementById('submitBtn');
+      var valid = true;
+
+      [name, email, message].forEach(function(f) { f.classList.remove('error'); });
+      document.querySelectorAll('.field-error').forEach(function(e) { e.classList.remove('visible'); });
+
+      if (!name.value.trim()) {
+        name.classList.add('error');
+        document.getElementById('nameError').classList.add('visible');
+        valid = false;
+      }
+      if (!email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+        email.classList.add('error');
+        document.getElementById('emailError').classList.add('visible');
+        valid = false;
+      }
+      if (!message.value.trim()) {
+        message.classList.add('error');
+        document.getElementById('messageError').classList.add('visible');
+        valid = false;
+      }
+
+      if (!valid) {
+        status.style.display = 'block';
+        status.style.color = '#e53e3e';
+        status.innerHTML = '<i class="fas fa-exclamation-circle"></i> Please fix the fields above.';
+        return;
+      }
+
+      var body = 'Name: ' + name.value.trim() + '\nEmail: ' + email.value.trim() + '\n\nMessage:\n' + message.value.trim();
+      var mailto = 'mailto:contact@jaytechsoln.in?subject=' + encodeURIComponent(subject.value.trim() || 'New Message from Website') + '&body=' + encodeURIComponent(body);
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Opening...';
+      status.style.display = 'block';
+      status.style.color = 'var(--primary)';
+      status.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Opening your email client...';
+
+      window.location.href = mailto;
+
+      setTimeout(function() {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+        status.innerHTML = '<i class="fas fa-check-circle"></i> If your email client didn\'t open, send directly to <strong>contact@jaytechsoln.in</strong>';
+        status.style.color = 'var(--primary)';
+      }, 4000);
+    });
+  }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Aswin Jay — the story behind the founder of JAY TECH SOLUTIONS. Student, developer, entrepreneur from Kadayanallur, Tamil Nadu.">
+  <meta property="og:title" content="About | Aswin Jay">
+  <meta property="og:description" content="The story behind the student-founder who built JAY TECH SOLUTIONS. IBM & PALS merit recipient, 7+ products, 50K+ users.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231a8a7a'/><text x='16' y='22' text-anchor='middle' fill='white' font-size='17' font-weight='bold' font-family='sans-serif'>AJ</text></svg>">
+  <title>About | Aswin Jay</title>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .story-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    .story-section .card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+    .story-section .card h3 i { color: var(--primary); margin-right: 0.5rem; }
+    .story-section .card p {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+    .story-section .card p:last-child { margin-bottom: 0; }
+
+    .achievement-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .achievement-item {
+      display: flex;
+      gap: 1rem;
+      padding: 1.2rem;
+      background: var(--primary-light);
+      border-radius: 8px;
+      border-left: 3px solid var(--primary);
+      transition: transform var(--transition);
+    }
+    .achievement-item:hover {
+      transform: translateX(4px);
+    }
+    .achievement-item .icon {
+      color: var(--primary);
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .achievement-item h4 {
+      font-size: 0.95rem;
+      margin-bottom: 0.2rem;
+      color: var(--text);
+    }
+    .achievement-item p {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .value-card {
+      background: var(--bg-card);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      border: 1px solid var(--border-card);
+      text-align: center;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .value-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+    .value-card .icon {
+      font-size: 1.8rem;
+      color: var(--primary);
+      margin-bottom: 0.6rem;
+    }
+    .value-card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+      color: var(--text);
+    }
+    .value-card p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+    }
+
+    .info-list {
+      list-style: none;
+    }
+    .info-list li {
+      display: flex;
+      gap: 0.75rem;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+    }
+    .info-list li:last-child { border-bottom: none; }
+    .info-list li i {
+      color: var(--primary);
+      width: 18px;
+      margin-top: 3px;
+    }
+    .info-list li strong {
+      min-width: 100px;
+      color: var(--text);
+    }
+
+    @media (max-width: 768px) {
+      .story-section { grid-template-columns: 1fr; }
+      .values-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<nav role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="logo">Aswin <span>Jay</span></a>
+  <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+    <i class="fas fa-bars"></i>
+  </button>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="resume.html">Resume</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><button class="theme-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button></li>
+  </ul>
+</nav>
+
+<main id="main-content">
+<section class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / About</div>
+    <h1>About <span>Aswin Jay</span></h1>
+    <p style="color:var(--text-muted);margin-top:0.5rem;font-size:1.05rem;">Student. Founder. Developer. The story behind the build.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="story-section">
+      <div>
+        <div class="card fade-in">
+          <h3><i class="fas fa-seedling"></i>Where It All Began</h3>
+          <p>I'm Aswin Jay, born and raised in Kadayanallur, a town in Tenkasi district, Tamil Nadu. I grew up around technology — always curious about how things work, what makes software tick, and how I could build something of my own.</p>
+          <p>In 2020, while I was still in class 11, I started JAY TECH SOLUTIONS. It wasn't a grand launch — it was a small spark. I started learning, building, and slowly turning ideas into real products. What began as a teenager experimenting with code became a company serving 50,000+ users across India.</p>
+          <p>Today, JAY TECH SOLUTIONS is a Udyam-registered MSME with a suite of products including JAY AI, JAY POS, JAY OFFICE, JAY CLOUD, JAY ERP, JAY CRM, and Jay Invoicing. I bootstrapped this from zero — no funding, no team, just determination and late nights.</p>
+        </div>
+        <div class="card fade-in" style="margin-top:1.5rem;">
+          <h3><i class="fas fa-university"></i>Education & Growth</h3>
+          <p>I'm currently pursuing my B.Tech in Computer Science and Business Systems at Ramco Institute of Technology, Rajapalayam. The CSBS program is unique — it blends core computer science with business management, which naturally complements my entrepreneurial journey.</p>
+          <p>At RIT, I've participated in hackathons, technical events, and industry lecture series. One of my proudest academic moments was receiving a Certificate of Merit from PALS (an IIT Alumni initiative) in partnership with the IBM India Research Lab for the Industry-Assisted Lecture Series on Systems for Large Language Models (LLMs) — as a first-year student.</p>
+        </div>
+        <div class="card fade-in" style="margin-top:1.5rem;">
+          <h3><i class="fas fa-briefcase"></i>Professional Experience</h3>
+          <p>Beyond my own company, I worked as a Technical Support Specialist at RMK Associates in Tenkasi from May 2024 to February 2025. This role gave me invaluable exposure to enterprise IT operations, client management, and real-world problem-solving — skills that I now bring back into building better products at JAY TECH SOLUTIONS.</p>
+        </div>
+      </div>
+      <div>
+        <div class="card fade-in">
+          <h3><i class="fas fa-trophy"></i>Achievements & Recognition</h3>
+          <div class="achievement-list">
+            <div class="achievement-item">
+              <div class="icon"><i class="fas fa-university"></i></div>
+              <div>
+                <h4>IIT Madras — Certificate of Appreciation</h4>
+                <p>Recognized for role as SPOC for the IIT Madras School Connect Program.</p>
+              </div>
+            </div>
+            <div class="achievement-item">
+              <div class="icon"><i class="fas fa-medal"></i></div>
+              <div>
+                <h4>IBM India Research Lab & PALS Certificate of Merit</h4>
+                <p>Industry-Assisted Lecture Series on Systems for Large Language Models (LLMs).</p>
+              </div>
+            </div>
+            <div class="achievement-item">
+              <div class="icon"><i class="fas fa-video"></i></div>
+              <div>
+                <h4>Best Business Video Award</h4>
+                <p>Rotary Club of Virudhunagar & Punch Gurukulam Training Program 53.0 (Nov 2025).</p>
+              </div>
+            </div>
+            <div class="achievement-item">
+              <div class="icon"><i class="fas fa-building"></i></div>
+              <div>
+                <h4>Founded JAY TECH SOLUTIONS (2020)</h4>
+                <p>Started at age 15. Bootstrapped Udyam-registered MSME serving 50,000+ users.</p>
+              </div>
+            </div>
+            <div class="achievement-item">
+              <div class="icon"><i class="fas fa-code"></i></div>
+              <div>
+                <h4>Built 7+ Software Products</h4>
+                <p>AI, POS, Office Suite, Cloud, ERP, CRM, and Invoicing — built end-to-end.</p>
+              </div>
+            </div>
+            <div class="achievement-item">
+              <div class="icon"><i class="fas fa-shield-alt"></i></div>
+              <div>
+                <h4>GIAC Software Cyber Security</h4>
+                <p>ShikshaVertex — Mar 2026. Recognized for software security expertise.</p>
+              </div>
+            </div>
+            <div class="achievement-item">
+              <div class="icon"><i class="fas fa-briefcase"></i></div>
+              <div>
+                <h4>Forage Job Simulations</h4>
+                <p>JPMorganChase, Tata, CommBank, Deloitte Australia — 4 simulations completed (2025-2026).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card fade-in" style="margin-top:1.5rem;">
+          <h3><i class="fas fa-heart"></i>Personal Philosophy</h3>
+          <p>I believe in building things that matter. I didn't wait for a degree or funding to start — I started with what I had. My philosophy is simple: <strong>learn by building, grow by shipping, and never stop being curious.</strong></p>
+          <p style="margin-top:0.8rem;">When I'm not coding or running my company, I'm exploring new technologies, reading about AI and business, and thinking about how to make software more accessible for Indian businesses.</p>
+        </div>
+        <div class="card fade-in" style="margin-top:1.5rem;">
+          <h3><i class="fas fa-map-pin"></i>Quick Details</h3>
+          <ul class="info-list">
+            <li><i class="fas fa-user"></i><strong>Full Name</strong> Aswin Jay (ASWINJAY M)</li>
+            <li><i class="fas fa-map-marker-alt"></i><strong>From</strong> Kadayanallur, Tenkasi, Tamil Nadu</li>
+            <li><i class="fas fa-graduation-cap"></i><strong>College</strong> Ramco Institute of Technology (CSBS)</li>
+            <li><i class="fas fa-building"></i><strong>Company</strong> JAY TECH SOLUTIONS (Since 2020)</li>
+            <li><i class="fas fa-envelope"></i><strong>Email</strong> contact@jaytechsoln.in</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background: #ffffff;">
+  <div class="container">
+    <div class="section-title fade-in">
+      <h2>What Drives Me</h2>
+      <p>The values I live and work by</p>
+      <div class="line"></div>
+    </div>
+    <div class="values-grid stagger-children">
+      <div class="value-card">
+        <div class="icon"><i class="fas fa-lightbulb"></i></div>
+        <h3>Build, Don't Wait</h3>
+        <p>I started my company before college. I believe you don't need permission to start — you just need to begin.</p>
+      </div>
+      <div class="value-card">
+        <div class="icon"><i class="fas fa-users"></i></div>
+        <h3>Impact First</h3>
+        <p>Every product I build is designed to solve real problems for real businesses, especially small and medium enterprises in India.</p>
+      </div>
+      <div class="value-card">
+        <div class="icon"><i class="fas fa-book-open"></i></div>
+        <h3>Lifelong Learning</h3>
+        <p>From AI research with IBM to business management at RIT — I'm constantly learning and applying new knowledge.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="page-nav">
+    <a href="index.html"><i class="fas fa-arrow-left"></i> Home</a>
+    <a href="resume.html">Resume <i class="fas fa-arrow-right"></i></a>
+  </div>
+</div>
+</main>
+
+<footer>
+  <p>&copy; 2026 Aswin Jay. Built with <i class="fas fa-heart" style="color:var(--primary);"></i> from Kadayanallur, Tamil Nadu.</p>
+</footer>
+
+<button class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var nav = document.querySelector('nav');
+  var menuBtn = document.querySelector('.menu-toggle');
+  var navUl = document.querySelector('nav ul');
+  var backBtn = document.querySelector('.back-to-top');
+  var themeBtn = document.querySelector('.theme-toggle');
+  var html = document.documentElement;
+
+  if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    html.setAttribute('data-theme', 'dark');
+    if (themeBtn) themeBtn.innerHTML = '<i class="fas fa-sun"></i>';
+  }
+  if (themeBtn) {
+    themeBtn.addEventListener('click', function() {
+      var isDark = html.getAttribute('data-theme') === 'dark';
+      html.setAttribute('data-theme', isDark ? '' : 'dark');
+      localStorage.setItem('theme', isDark ? '' : 'dark');
+      themeBtn.innerHTML = isDark ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+    });
+  }
+
+  window.addEventListener('scroll', function() {
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+    backBtn.classList.toggle('visible', window.scrollY > 400);
+  });
+  if (backBtn) backBtn.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  if (menuBtn) {
+    menuBtn.addEventListener('click', function() {
+      var isOpen = navUl.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', isOpen);
+      document.body.classList.toggle('nav-open', isOpen);
+    });
+  }
+  document.querySelectorAll('nav a:not(.theme-toggle)').forEach(function(link) {
+    link.addEventListener('click', function() {
+      navUl.classList.remove('open');
+      if (menuBtn) menuBtn.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('nav-open');
+    });
+  });
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right, .fade-in-scale, .stagger-children').forEach(function(el) { observer.observe(el); });
+});
+</script>
+</body>
+</html>

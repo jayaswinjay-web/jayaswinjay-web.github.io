@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Resume of Aswin Jay — Founder & CEO at JAY TECH SOLUTIONS. Skills, experience, certifications, and projects.">
+  <meta property="og:title" content="Resume | Aswin Jay">
+  <meta property="og:description" content="Professional resume of Aswin Jay — Founder & CEO at JAY TECH SOLUTIONS. Skills, experience, certifications.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231a8a7a'/><text x='16' y='22' text-anchor='middle' fill='white' font-size='17' font-weight='bold' font-family='sans-serif'>AJ</text></svg>">
+  <title>Resume | Aswin Jay</title>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .resume-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 2rem;
+      align-items: start;
+    }
+    .sidebar .card { margin-bottom: 1.5rem; }
+    .sidebar .card h3 {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--primary);
+      color: var(--text);
+    }
+    .sidebar .card h3 i { color: var(--primary); margin-right: 0.5rem; }
+
+    .main-content .card { margin-bottom: 1.5rem; }
+    .main-content .card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--primary);
+      color: var(--text);
+    }
+    .main-content .card h3 i { color: var(--primary); margin-right: 0.5rem; }
+
+    .exp-item {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .exp-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+    .exp-item h4 { font-size: 1rem; color: var(--text); }
+    .exp-item .meta {
+      font-size: 0.85rem;
+      color: var(--primary);
+      font-weight: 600;
+      margin: 0.2rem 0 0.4rem;
+    }
+    .exp-item .company { color: var(--text-secondary); font-size: 0.9rem; font-weight: 500; }
+    .exp-item p { color: var(--text-muted); font-size: 0.88rem; }
+    .exp-item ul { margin-top: 0.4rem; padding-left: 1.2rem; }
+    .exp-item ul li { color: var(--text-muted); font-size: 0.88rem; margin-bottom: 0.3rem; }
+
+    .skill-block { margin-bottom: 1.2rem; }
+    .skill-block:last-child { margin-bottom: 0; }
+    .skill-block h4 {
+      font-size: 0.9rem;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .skill-tags span {
+      background: var(--primary-light);
+      color: var(--text-secondary);
+      font-size: 0.8rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 5px;
+      border: 1px solid var(--border);
+      transition: all var(--transition);
+    }
+    .skill-tags span:hover {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    .skill-bar-block { margin-bottom: 1rem; }
+    .skill-bar-block:last-child { margin-bottom: 0; }
+    .skill-bar-block .sb-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      margin-bottom: 0.3rem;
+    }
+    .skill-bar-block .sb-label span:first-child { color: var(--text); font-weight: 500; }
+    .skill-bar-block .sb-label span:last-child { color: var(--text-muted); }
+    .skill-bar {
+      height: 6px;
+      background: var(--border);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .skill-bar .fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary), #52b9a8);
+      border-radius: 3px;
+      width: 0;
+      transition: width 0.8s ease;
+    }
+    .skill-bar .fill.animated {
+      /* width set via inline style */
+    }
+
+    .cert-item {
+      display: flex;
+      gap: 0.75rem;
+      padding: 0.8rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .cert-item:last-child { border-bottom: none; }
+    .cert-item .icon { color: var(--primary); flex-shrink: 0; margin-top: 2px; }
+    .cert-item h4 { font-size: 0.9rem; color: var(--text); }
+    .cert-item p { color: var(--text-muted); font-size: 0.83rem; }
+
+    .resume-header-card {
+      background: linear-gradient(135deg, var(--primary), #147a6b);
+      color: #fff;
+      border-radius: var(--radius);
+      padding: 2rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .resume-header-card h2 { font-size: 1.3rem; margin-bottom: 0.3rem; }
+    .resume-header-card p { font-size: 0.85rem; opacity: 0.9; margin-bottom: 0.2rem; }
+    .resume-header-card .rlinks { margin-top: 0.8rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+    .resume-header-card .rlinks a { color: #fff; font-size: 0.82rem; display: inline-flex; align-items: center; gap: 0.3rem; opacity: 0.85; transition: opacity 0.2s; }
+    .resume-header-card .rlinks a:hover { opacity: 1; }
+
+    @media (max-width: 768px) {
+      .resume-grid { grid-template-columns: 1fr; }
+    }
+    @media print {
+      @page { margin: 0.4in; size: A4; }
+      body { background: #fff !important; color: #000 !important; font-size: 10pt; line-height: 1.35; }
+      nav, footer, .page-nav, .page-header, .btn, .menu-toggle, .theme-toggle, .back-to-top, .skip-link { display: none !important; }
+      .resume-grid { display: block !important; }
+      .sidebar { float: left; width: 33%; padding-right: 1.2rem; }
+      .main-content { float: left; width: 65%; }
+      .card { box-shadow: none !important; border: none !important; padding: 0.4rem 0 !important; }
+      .card h3 { font-size: 10pt !important; margin-bottom: 0.3rem !important; }
+      .exp-item { margin-bottom: 0.6rem !important; padding-bottom: 0.6rem !important; }
+      .exp-item ul li { margin-bottom: 0.15rem !important; }
+      .skill-tags span { background: #eee !important; border: 1px solid #ccc !important; }
+      .skill-tags span:hover { background: #eee !important; color: inherit !important; }
+      .cert-item { padding: 0.25rem 0 !important; }
+      .resume-header-card { background: #1a8a7a !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+      .skill-bar .fill { background: #1a8a7a !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+      .fade-in, .fade-in-left, .fade-in-right, .fade-in-scale { opacity: 1 !important; transform: none !important; }
+      .stagger-children > * { opacity: 1 !important; transform: none !important; }
+      .skill-bar .fill { width: 100% !important; }
+    }
+  </style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<nav role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="logo">Aswin <span>Jay</span></a>
+  <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+    <i class="fas fa-bars"></i>
+  </button>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="resume.html" class="active">Resume</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><button class="theme-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button></li>
+  </ul>
+</nav>
+
+<main id="main-content">
+<section class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Resume</div>
+    <h1>Resume</h1>
+    <p style="color:var(--text-muted);margin-top:0.5rem;">My professional experience, skills, and qualifications.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="resume-grid">
+      <div class="sidebar">
+        <div class="resume-header-card">
+          <h2>Aswin Jay</h2>
+          <p>Founder & CEO, JAY TECH SOLUTIONS</p>
+          <p style="font-size:0.8rem;opacity:0.8;">Kadayanallur, Tamil Nadu</p>
+          <div class="rlinks">
+            <a href="mailto:contact@jaytechsoln.in"><i class="fas fa-envelope"></i> Email</a>
+            <a href="https://linkedin.com/in/aswinjay-m-543ba0390" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+            <a href="https://github.com/Aswinajay" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3><i class="fas fa-code"></i>Skills</h3>
+          <div class="skill-block">
+            <h4>Languages</h4>
+            <div class="skill-tags">
+              <span>Python</span><span>JavaScript</span><span>PHP</span><span>HTML/CSS</span><span>C</span><span>x86-64 Assembly</span><span>AK CODE</span>
+            </div>
+          </div>
+          <div class="skill-block">
+            <h4>Frameworks & Tools</h4>
+            <div class="skill-tags">
+              <span>Next.js</span><span>Laravel</span><span>Electron</span><span>React</span><span>Node.js</span><span>Gemini API</span>
+            </div>
+          </div>
+          <div class="skill-block">
+            <h4>Platforms & Infrastructure</h4>
+            <div class="skill-tags">
+              <span>MySQL</span><span>Cloud</span><span>Linux</span><span>Git/GitHub</span><span>Win32 API</span><span>NASM</span>
+            </div>
+          </div>
+          <div class="skill-block">
+            <h4>Specialized Areas</h4>
+            <div class="skill-tags">
+              <span>Compiler Design</span><span>Systems Programming</span><span>AI/ML</span><span>Web Dev</span><span>Business Software</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3><i class="fas fa-chart-bar"></i>Proficiency</h3>
+          <div class="skill-bar-block">
+            <div class="sb-label"><span>Python / Web Dev</span><span>95%</span></div>
+            <div class="skill-bar"><div class="fill" style="width:0" data-width="95%"></div></div>
+          </div>
+          <div class="skill-bar-block">
+            <div class="sb-label"><span>Systems / Assembly</span><span>85%</span></div>
+            <div class="skill-bar"><div class="fill" style="width:0" data-width="85%"></div></div>
+          </div>
+          <div class="skill-bar-block">
+            <div class="sb-label"><span>Laravel / PHP</span><span>80%</span></div>
+            <div class="skill-bar"><div class="fill" style="width:0" data-width="80%"></div></div>
+          </div>
+          <div class="skill-bar-block">
+            <div class="sb-label"><span>React / Next.js</span><span>75%</span></div>
+            <div class="skill-bar"><div class="fill" style="width:0" data-width="75%"></div></div>
+          </div>
+          <div class="skill-bar-block">
+            <div class="sb-label"><span>Cloud / DevOps</span><span>70%</span></div>
+            <div class="skill-bar"><div class="fill" style="width:0" data-width="70%"></div></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3><i class="fas fa-award"></i>Certifications</h3>
+          <div class="cert-item">
+            <div class="icon"><i class="fas fa-certificate"></i></div>
+            <div>
+              <h4>Certificate of Appreciation — IIT Madras</h4>
+              <p>SPOC for the IIT Madras School Connect Program.</p>
+            </div>
+          </div>
+          <div class="cert-item">
+            <div class="icon"><i class="fas fa-certificate"></i></div>
+            <div>
+              <h4>Certificate of Merit — IBM & PALS</h4>
+              <p>Systems for LLMs — by IBM India Research Lab & PALS (IIT Alumni).</p>
+            </div>
+          </div>
+          <div class="cert-item">
+            <div class="icon"><i class="fas fa-certificate"></i></div>
+            <div>
+              <h4>3rd Prize — IEEE Ignite Event</h4>
+              <p>Kalasalingam University — ₹2500 cash prize.</p>
+            </div>
+          </div>
+          <div class="cert-item">
+            <div class="icon"><i class="fas fa-certificate"></i></div>
+            <div>
+              <h4>Best Business Video Award</h4>
+              <p>Rotary Club & Punch Gurukulam Program 53.0 (Nov 2025).</p>
+            </div>
+          </div>
+          <div class="cert-item">
+            <div class="icon"><i class="fas fa-certificate"></i></div>
+            <div>
+              <h4>GIAC Software Cyber Security</h4>
+              <p>ShikshaVertex — Mar 2026.</p>
+            </div>
+          </div>
+          <div class="cert-item">
+            <div class="icon"><i class="fas fa-certificate"></i></div>
+            <div>
+              <h4>JPMorganChase — SWE Job Simulation</h4>
+              <p>Forage — Jan 2026.</p>
+            </div>
+          </div>
+          <div class="cert-item">
+            <div class="icon"><i class="fas fa-certificate"></i></div>
+            <div>
+              <h4>Tata — GenAI Data Analytics</h4>
+              <p>Forage — Jan 2026.</p>
+            </div>
+          </div>
+          <div class="cert-item">
+            <div class="icon"><i class="fas fa-certificate"></i></div>
+            <div>
+              <h4>CommBank — Data Science</h4>
+              <p>Forage — Jan 2026.</p>
+            </div>
+          </div>
+          <div class="cert-item">
+            <div class="icon"><i class="fas fa-certificate"></i></div>
+            <div>
+              <h4>Deloitte Australia — Cyber</h4>
+              <p>Forage — Dec 2025.</p>
+            </div>
+          </div>
+          <div class="cert-item">
+            <div class="icon"><i class="fas fa-certificate"></i></div>
+            <div>
+              <h4>Udyam Registered MSME</h4>
+              <p>JAY TECH SOLUTIONS.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3><i class="fas fa-download"></i>Download</h3>
+          <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:1rem;">Get a PDF version of my resume.</p>
+          <a href="resume.pdf" target="_blank" class="btn btn-primary btn-sm" style="width:100%;justify-content:center;"><i class="fas fa-file-pdf"></i> Download Resume (PDF)</a>
+          <a href="#" onclick="window.print();return false;" class="btn btn-outline btn-sm" style="width:100%;justify-content:center;margin-top:0.5rem;"><i class="fas fa-print"></i> Print / Save as PDF</a>
+        </div>
+      </div>
+
+      <div class="main-content">
+        <div class="card fade-in">
+          <h3><i class="fas fa-briefcase"></i>Work Experience</h3>
+
+          <div class="exp-item">
+            <h4>Founder & CEO</h4>
+            <div class="meta">2020 — Present</div>
+            <div class="company">JAY TECH SOLUTIONS</div>
+            <ul>
+              <li>Founded and scaled a business software company from scratch at age 15 (while in class 11).</li>
+              <li>Designed, developed, and deployed 7+ software products serving 50,000+ users across India.</li>
+              <li>Built JAY AI (AI chatbot platform using Google Gemini API), JAY POS (Electron-based POS system), JAY CRM (Next.js), JAY ERP (Laravel), JAY CLOUD, JAY OFFICE, and Jay Invoicing.</li>
+              <li>Managed full product lifecycle: conception, architecture, development, deployment, and user support.</li>
+              <li>Registered as Udyam MSME — fully bootstrapped with zero external funding.</li>
+            </ul>
+          </div>
+
+          <div class="exp-item">
+            <h4>Technical Support Specialist</h4>
+            <div class="meta">May 2024 — Feb 2025</div>
+            <div class="company">RMK Associates, Tenkasi</div>
+            <ul>
+              <li>Provided technical support and IT solutions for enterprise clients.</li>
+              <li>Gained hands-on experience in enterprise IT operations, troubleshooting, and client relationship management.</li>
+              <li>Developed strong problem-solving skills in a fast-paced professional environment.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card fade-in">
+          <h3><i class="fas fa-project-diagram"></i>Key Projects</h3>
+
+          <div class="exp-item">
+            <h4>AK CODE — Programming Language</h4>
+            <div class="meta">Ongoing</div>
+            <p>A brand-new programming language designed to read like natural English. Features a native x86-64 assembly bootstrap compiler (NASM), full standard library (AI/ML, web server, database, math, UI), and a custom IDE called AK IDE. Designed to be powerful enough for OS development, AI models, and web applications while remaining beginner-friendly.</p>
+          </div>
+
+          <div class="exp-item">
+            <h4>Fake OS — Windows Desktop Simulator</h4>
+            <div class="meta">Ongoing</div>
+            <p>A simulated Windows-like desktop environment built in C using Win32 API. Features gradient desktop rendering, taskbar, and start menu functionality — demonstrating low-level systems programming skills.</p>
+          </div>
+        </div>
+
+        <div class="card fade-in">
+          <h3><i class="fas fa-graduation-cap"></i>Education</h3>
+          <div class="exp-item">
+            <h4>B.Tech in Computer Science and Business Systems</h4>
+            <div class="meta">2025 — 2029 (Expected)</div>
+            <div class="company">Ramco Institute of Technology, Rajapalayam</div>
+            <ul>
+              <li>Currently pursuing — blending computer science with business management.</li>
+              <li>Active participant in hackathons, technical symposiums, and industry lecture series.</li>
+              <li>Recipient of Certificate of Merit from IBM India Research Lab & PALS (IIT Alumni initiative).</li>
+              <li>Department: CSBS — HOD: Dr. M. Gomathy Nayagam.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="page-nav">
+    <a href="about.html"><i class="fas fa-arrow-left"></i> About</a>
+    <a href="projects.html">Projects <i class="fas fa-arrow-right"></i></a>
+  </div>
+</div>
+</main>
+
+<footer>
+  <p>&copy; 2026 Aswin Jay. Built with <i class="fas fa-heart" style="color:var(--primary);"></i> from Kadayanallur, Tamil Nadu.</p>
+</footer>
+
+<button class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var nav = document.querySelector('nav');
+  var menuBtn = document.querySelector('.menu-toggle');
+  var navUl = document.querySelector('nav ul');
+  var backBtn = document.querySelector('.back-to-top');
+  var themeBtn = document.querySelector('.theme-toggle');
+  var html = document.documentElement;
+
+  if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    html.setAttribute('data-theme', 'dark');
+    if (themeBtn) themeBtn.innerHTML = '<i class="fas fa-sun"></i>';
+  }
+  if (themeBtn) {
+    themeBtn.addEventListener('click', function() {
+      var isDark = html.getAttribute('data-theme') === 'dark';
+      html.setAttribute('data-theme', isDark ? '' : 'dark');
+      localStorage.setItem('theme', isDark ? '' : 'dark');
+      themeBtn.innerHTML = isDark ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+    });
+  }
+
+  window.addEventListener('scroll', function() {
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+    backBtn.classList.toggle('visible', window.scrollY > 400);
+  });
+  if (backBtn) backBtn.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  if (menuBtn) {
+    menuBtn.addEventListener('click', function() {
+      var isOpen = navUl.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', isOpen);
+      document.body.classList.toggle('nav-open', isOpen);
+    });
+  }
+  document.querySelectorAll('nav a:not(.theme-toggle)').forEach(function(link) {
+    link.addEventListener('click', function() {
+      navUl.classList.remove('open');
+      if (menuBtn) menuBtn.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('nav-open');
+    });
+  });
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+    });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.fade-in, .stagger-children').forEach(function(el) { observer.observe(el); });
+
+  var skillObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.style.width = entry.target.getAttribute('data-width') || '0%';
+        skillObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('.skill-bar .fill[data-width]').forEach(function(el) { skillObserver.observe(el); });
+});
+</script>
+</body>
+</html>

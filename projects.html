@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projects by Aswin Jay — AK CODE programming language, Fake OS, JAY AI, JAY POS, JAY CRM, JAY ERP, JAY CLOUD, and more.">
+  <meta property="og:title" content="Projects | Aswin Jay">
+  <meta property="og:description" content="AK CODE programming language, JAY AI, JAY POS, JAY CRM, JAY ERP, JAY CLOUD, JAY OFFICE, Fake OS — full project showcase.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231a8a7a'/><text x='16' y='22' text-anchor='middle' fill='white' font-size='17' font-weight='bold' font-family='sans-serif'>AJ</text></svg>">
+  <title>Projects | Aswin Jay</title>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 1.5rem;
+    }
+    .project-card {
+      background: var(--bg-card);
+      border-radius: var(--radius);
+      padding: 2rem;
+      border: 1px solid var(--border-card);
+      transition: transform var(--transition), box-shadow var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+    .project-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+    .project-card .icon {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 0.8rem;
+    }
+    .project-card h3 { font-size: 1.15rem; margin-bottom: 0.3rem; color: var(--text); }
+    .project-card .sub { color: var(--primary); font-size: 0.82rem; font-weight: 600; margin-bottom: 0.7rem; }
+    .project-card p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem; line-height: 1.6; flex: 1; }
+    .project-card .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 1rem;
+    }
+    .project-card .tags span {
+      background: var(--primary-light);
+      color: var(--primary);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 0.7rem;
+      border-radius: 4px;
+    }
+    .project-card .gh-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      transition: color var(--transition);
+      margin-top: auto;
+    }
+    .project-card .gh-link:hover { color: var(--primary); }
+
+    .project-featured {
+      background: #1e272e;
+      border-radius: 12px;
+      padding: 3rem;
+      margin-bottom: 2rem;
+      color: #ffffff;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+    .project-featured .icon { font-size: 2.5rem; color: #52b9a8; margin-bottom: 0.8rem; }
+    .project-featured h2 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+    .project-featured .sub { color: #52b9a8; font-weight: 600; font-size: 0.9rem; margin-bottom: 1rem; }
+    .project-featured p { color: #9aa8b3; font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.2rem; }
+    .project-featured .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.2rem; }
+    .project-featured .tags span {
+      background: #2d3748;
+      color: #cbd5e0;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.3rem 0.8rem;
+      border-radius: 4px;
+    }
+    .project-featured .gh-link {
+      color: #52b9a8;
+      font-weight: 600;
+      font-size: 0.88rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: opacity 0.2s;
+    }
+    .project-featured .gh-link:hover { opacity: 0.8; }
+
+    .project-featured-right .stat-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      text-align: center;
+    }
+    .project-featured-right .stat-row .num {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #52b9a8;
+    }
+    .project-featured-right .stat-row .lbl {
+      font-size: 0.8rem;
+      color: #9aa8b3;
+    }
+
+    @media (max-width: 768px) {
+      .project-featured { grid-template-columns: 1fr; padding: 2rem; }
+      .projects-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<nav role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="logo">Aswin <span>Jay</span></a>
+  <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+    <i class="fas fa-bars"></i>
+  </button>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="resume.html">Resume</a></li>
+    <li><a href="projects.html" class="active">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><button class="theme-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button></li>
+  </ul>
+</nav>
+
+<main id="main-content">
+<section class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Projects</div>
+    <h1>Projects & <span>Products</span></h1>
+    <p style="color:var(--text-muted);margin-top:0.5rem;">Everything I've built — from programming languages to business software.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+
+    <div class="project-featured fade-in">
+      <div>
+        <div class="icon"><i class="fas fa-code"></i></div>
+        <h2>AK CODE</h2>
+        <div class="sub">A programming language designed to read like English</div>
+        <p>AK CODE is a ground-up programming language project written in x86-64 assembly (NASM). No borrowed VM, no interpreter — everything from the bootstrap compiler to the standard library is built from scratch. Features a natural English-like syntax, full standard library (AI/ML, web server, database, math, UI), and a custom IDE (AK IDE). Targets both Linux (ELF) and Windows (PE/COFF) natively.</p>
+        <div class="tags">
+          <span>x86-64 Assembly</span><span>NASM</span><span>Compiler Design</span><span>ELF/PE</span><span>Systems Programming</span>
+        </div>
+        <a href="https://github.com/jayaswinjay-web/ak-code" target="_blank" class="gh-link"><i class="fab fa-github"></i> View on GitHub</a>
+      </div>
+      <div class="project-featured-right">
+        <div class="stat-row">
+          <div><div class="num">37K+</div><div class="lbl">Lines of Code</div></div>
+          <div><div class="num">100+</div><div class="lbl">Language Features</div></div>
+          <div><div class="num">2</div><div class="lbl">Arch Targets</div></div>
+        </div>
+        <p style="margin-top:1.5rem;color:#9aa8b3;font-size:0.88rem;">Includes: lexer, parser, codegen, runtime (malloc/GC/print/IO), linker glue, self-hosting compiler in AK CODE, stdlib (AI, web, math, database, OS), and full IDE with multi-agent AI panel.</p>
+      </div>
+    </div>
+
+    <div class="projects-grid stagger-children">
+      <div class="project-card">
+        <div class="icon"><i class="fas fa-robot"></i></div>
+        <h3>JAY AI</h3>
+        <div class="sub">AI Chatbot & Automation Platform</div>
+        <p>AI-powered chatbot and business process automation platform. Built with Python and Google Gemini API. Handles intelligent customer service, automated responses, and business workflow automation for enterprises.</p>
+        <div class="tags"><span>Python</span><span>Gemini API</span><span>AI</span><span>Automation</span></div>
+        <a href="https://github.com/jayaswinjay-web/jay-ai" target="_blank" class="gh-link"><i class="fab fa-github"></i> View on GitHub</a>
+      </div>
+
+      <div class="project-card">
+        <div class="icon"><i class="fas fa-cash-register"></i></div>
+        <h3>JAY POS</h3>
+        <div class="sub">Enterprise Point-of-Sale System</div>
+        <p>Full-featured POS system with inventory management, billing, real-time transaction tracking, and reporting. Built with React, TypeScript, Electron & Supabase.</p>
+        <div class="tags"><span>React</span><span>TypeScript</span><span>Electron</span><span>Supabase</span></div>
+        <a href="https://github.com/jayaswinjay-web/jay-pos" target="_blank" class="gh-link"><i class="fab fa-github"></i> View on GitHub</a>
+      </div>
+
+      <div class="project-card">
+        <div class="icon"><i class="fas fa-people-arrows"></i></div>
+        <h3>JAY CRM</h3>
+        <div class="sub">Customer Relationship Management</div>
+        <p>Next.js-based CRM platform for managing leads, contacts, sales pipelines, and customer interactions. Designed for small to medium businesses with modern UI and Prisma ORM.</p>
+        <div class="tags"><span>Next.js</span><span>TypeScript</span><span>Prisma</span><span>CRM</span></div>
+        <a href="https://github.com/jayaswinjay-web/jay-crm" target="_blank" class="gh-link"><i class="fab fa-github"></i> View on GitHub</a>
+      </div>
+
+      <div class="project-card">
+        <div class="icon"><i class="fas fa-building"></i></div>
+        <h3>JAY ERP</h3>
+        <div class="sub">Enterprise Resource Planning</div>
+        <p>Laravel-based ERP system integrating business processes across departments — from inventory and procurement to HR and finance. Includes Anna AI assistant for intelligent process automation.</p>
+        <div class="tags"><span>Laravel</span><span>PHP</span><span>Livewire</span><span>ERP</span></div>
+        <a href="https://github.com/jayaswinjay-web/jay-erp" target="_blank" class="gh-link"><i class="fab fa-github"></i> View on GitHub</a>
+      </div>
+
+      <div class="project-card">
+        <div class="icon"><i class="fas fa-cloud"></i></div>
+        <h3>JAY CLOUD</h3>
+        <div class="sub">Cloud Platform</div>
+        <p>Scalable cloud infrastructure platform offering storage, compute, and deployment solutions for businesses. Full-stack architecture with Node.js and React.</p>
+        <div class="tags"><span>Node.js</span><span>React</span><span>Cloud</span><span>Infrastructure</span></div>
+        <a href="https://github.com/jayaswinjay-web/jay-cloud" target="_blank" class="gh-link"><i class="fab fa-github"></i> View on GitHub</a>
+      </div>
+
+      <div class="project-card">
+        <div class="icon"><i class="fas fa-file-invoice"></i></div>
+        <h3>JAY OFFICE</h3>
+        <div class="sub">Office Productivity Suite</div>
+        <p>Complete monorepo workspace integrating Docs, Sheets, Slides, Mail, Drive, Meet, Chat, Tasks, Notes, Forms, and Sign. Built with Turborepo, React, and microservices architecture.</p>
+        <div class="tags"><span>Turborepo</span><span>React</span><span>TypeScript</span><span>Microservices</span></div>
+        <a href="https://github.com/jayaswinjay-web/jay-office" target="_blank" class="gh-link"><i class="fab fa-github"></i> View on GitHub</a>
+      </div>
+
+      <div class="project-card">
+        <div class="icon"><i class="fas fa-file-invoice-dollar"></i></div>
+        <h3>Jay Invoicing</h3>
+        <div class="sub">Automated Invoicing System</div>
+        <p>Python-based automated invoicing system for small and medium businesses. Generates, sends, and tracks invoices with payment reconciliation. Built with PyQt5 for a native desktop experience.</p>
+        <div class="tags"><span>Python</span><span>PyQt5</span><span>Automation</span><span>Finance</span></div>
+        <a href="https://github.com/jayaswinjay-web/jay-invoicing" target="_blank" class="gh-link"><i class="fab fa-github"></i> View on GitHub</a>
+      </div>
+
+      <div class="project-card">
+        <div class="icon"><i class="fas fa-desktop"></i></div>
+        <h3>Fake OS</h3>
+        <div class="sub">Windows Desktop Simulator</div>
+        <p>Windows-like desktop environment simulator built in C using the Win32 API. Features gradient desktop rendering, dark taskbar, start menu, and window management — demonstrating low-level systems programming with GDI.</p>
+        <div class="tags"><span>C</span><span>Win32 API</span><span>GDI</span><span>Systems</span></div>
+        <a href="https://github.com/jayaswinjay-web/fake-os" target="_blank" class="gh-link"><i class="fab fa-github"></i> View on GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="page-nav">
+    <a href="resume.html"><i class="fas fa-arrow-left"></i> Resume</a>
+    <a href="contact.html">Contact <i class="fas fa-arrow-right"></i></a>
+  </div>
+</div>
+</main>
+
+<footer>
+  <p>&copy; 2026 Aswin Jay. Built with <i class="fas fa-heart" style="color:var(--primary);"></i> from Kadayanallur, Tamil Nadu.</p>
+</footer>
+
+<button class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var nav = document.querySelector('nav');
+  var menuBtn = document.querySelector('.menu-toggle');
+  var navUl = document.querySelector('nav ul');
+  var backBtn = document.querySelector('.back-to-top');
+  var themeBtn = document.querySelector('.theme-toggle');
+  var html = document.documentElement;
+
+  if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    html.setAttribute('data-theme', 'dark');
+    if (themeBtn) themeBtn.innerHTML = '<i class="fas fa-sun"></i>';
+  }
+  if (themeBtn) {
+    themeBtn.addEventListener('click', function() {
+      var isDark = html.getAttribute('data-theme') === 'dark';
+      html.setAttribute('data-theme', isDark ? '' : 'dark');
+      localStorage.setItem('theme', isDark ? '' : 'dark');
+      themeBtn.innerHTML = isDark ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+    });
+  }
+
+  window.addEventListener('scroll', function() {
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+    backBtn.classList.toggle('visible', window.scrollY > 400);
+  });
+  if (backBtn) backBtn.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  if (menuBtn) {
+    menuBtn.addEventListener('click', function() {
+      var isOpen = navUl.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', isOpen);
+      document.body.classList.toggle('nav-open', isOpen);
+    });
+  }
+  document.querySelectorAll('nav a:not(.theme-toggle)').forEach(function(link) {
+    link.addEventListener('click', function() {
+      navUl.classList.remove('open');
+      if (menuBtn) menuBtn.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('nav-open');
+    });
+  });
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right, .fade-in-scale, .stagger-children').forEach(function(el) { observer.observe(el); });
+});
+</script>
+</body>
+</html>

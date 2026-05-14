@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aswin Jay — Founder & CEO of JAY TECH SOLUTIONS. Student at Ramco Institute of Technology. Building business software used by 50,000+ users across India.">
+  <meta property="og:title" content="Aswin Jay | Founder & CEO at JAY TECH SOLUTIONS">
+  <meta property="og:description" content="Building India's next-gen business software. Student at RIT, founder since 15. AI, POS, CRM, ERP & more.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jayaswinjay-web.github.io/portfolio/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231a8a7a'/><text x='16' y='22' text-anchor='middle' fill='white' font-size='17' font-weight='bold' font-family='sans-serif'>AJ</text></svg>">
+  <title>Aswin Jay | Founder & CEO at JAY TECH SOLUTIONS</title>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .hero {
+      padding-top: 8rem;
+      padding-bottom: 4rem;
+      background: linear-gradient(135deg, #ffffff 0%, #f0f5f4 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(26,138,122,0.04) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero .container {
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-text { flex: 1; }
+    .hero-text .badge {
+      display: inline-block;
+      background: var(--primary-light);
+      color: var(--primary);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.35rem 1.1rem;
+      border-radius: 20px;
+      margin-bottom: 1rem;
+    }
+    .hero-text h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+    .hero-text h1 span { color: var(--primary); }
+    .hero-text .subtitle {
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.2rem;
+      min-height: 1.6em;
+    }
+    .hero-text .subtitle .cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1.2em;
+      background: var(--primary);
+      margin-left: 2px;
+      vertical-align: text-bottom;
+      animation: blink 0.8s infinite;
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
+    }
+    .hero-text p {
+      color: var(--text-muted);
+      max-width: 540px;
+      margin-bottom: 2rem;
+      font-size: 1rem;
+    }
+    .hero-btns {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .hero-img .avatar {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), #52b9a8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5.5rem;
+      font-weight: 700;
+      color: #ffffff;
+      box-shadow: 0 20px 40px rgba(26,138,122,0.15);
+      transition: transform 0.3s ease;
+    }
+    .hero-img .avatar:hover {
+      transform: scale(1.02);
+    }
+    .hero-quick-stats {
+      display: flex;
+      gap: 2.5rem;
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+    .hero-quick-stats div {
+      text-align: center;
+    }
+    .hero-quick-stats .num {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+    .hero-quick-stats .lbl {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .highlight-card {
+      background: var(--bg-card);
+      border-radius: var(--radius);
+      padding: 2rem;
+      border: 1px solid var(--border-card);
+      text-align: center;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .highlight-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+    .highlight-card .icon {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 0.8rem;
+    }
+    .highlight-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.4rem;
+      color: var(--text);
+    }
+    .highlight-card p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .featured-projects {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .fp-card {
+      background: var(--bg-card);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      border: 1px solid var(--border-card);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .fp-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+    .fp-card .icon {
+      font-size: 1.6rem;
+      color: var(--primary);
+      margin-bottom: 0.6rem;
+    }
+    .fp-card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.4rem;
+      color: var(--text);
+    }
+    .fp-card p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+    }
+
+    .cta-section {
+      background: #1e272e;
+      color: #ffffff;
+      text-align: center;
+      padding: 4rem 0;
+    }
+    .cta-section h2 {
+      font-size: 2rem;
+      margin-bottom: 0.8rem;
+    }
+    .cta-section p {
+      color: #9aa8b3;
+      margin-bottom: 2rem;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (max-width: 768px) {
+      .hero .container {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+      .hero-text p { max-width: 100%; }
+      .hero-text h1 { font-size: 2rem; }
+      .hero-btns { justify-content: center; }
+      .hero-img .avatar { width: 180px; height: 180px; font-size: 3rem; }
+      .hero-quick-stats { justify-content: center; }
+      .highlights-grid,
+      .featured-projects { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<nav role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="logo">Aswin <span>Jay</span></a>
+  <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+    <i class="fas fa-bars"></i>
+  </button>
+  <ul>
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="resume.html">Resume</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><button class="theme-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button></li>
+  </ul>
+</nav>
+
+<main id="main-content">
+<section class="hero">
+  <div class="container">
+    <div class="hero-text">
+      <div class="badge">Founder & CEO</div>
+      <h1>Hi, I'm <span>Aswin Jay</span></h1>
+      <div class="subtitle" id="typed-text">Building India's next-gen business software<span class="cursor"></span></div>
+      <p>Student at Ramco Institute of Technology (CSBS). Founded my company at 15. Created JAY AI, JAY POS, JAY OFFICE & more. Trusted by 50,000+ users across India. IBM & PALS merit recipient.</p>
+      <div class="hero-btns">
+        <a href="projects.html" class="btn btn-primary"><i class="fas fa-briefcase"></i> View Projects</a>
+        <a href="about.html" class="btn btn-outline"><i class="fas fa-user"></i> More About Me</a>
+        <a href="contact.html" class="btn btn-outline"><i class="fas fa-envelope"></i> Get In Touch</a>
+      </div>
+      <div class="hero-quick-stats">
+        <div><div class="num" data-count="50000">0</div><div class="lbl">Active Users</div></div>
+        <div><div class="num" data-count="7">0</div><div class="lbl">Products</div></div>
+        <div><div class="num" data-count="5">0</div><div class="lbl">Years Building</div></div>
+        <div><div class="num" data-count="10">0</div><div class="lbl">Certifications</div></div>
+      </div>
+    </div>
+    <div class="hero-img">
+      <div class="avatar" role="img" aria-label="Aswin Jay initials">AJ</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-title fade-in">
+      <h2>At a Glance</h2>
+      <p>What defines my journey so far</p>
+      <div class="line"></div>
+    </div>
+    <div class="highlights-grid stagger-children">
+      <div class="highlight-card">
+        <div class="icon"><i class="fas fa-rocket"></i></div>
+        <h3>Started at 15</h3>
+        <p>Founded JAY TECH SOLUTIONS in class 11. Turned a curiosity for tech into a business serving thousands.</p>
+      </div>
+      <div class="highlight-card">
+        <div class="icon"><i class="fas fa-graduation-cap"></i></div>
+        <h3>B.Tech CSBS @ RIT</h3>
+        <p>Currently pursuing Computer Science & Business Systems at Ramco Institute of Technology, Rajapalayam.</p>
+      </div>
+      <div class="highlight-card">
+        <div class="icon"><i class="fas fa-award"></i></div>
+        <h3>IBM & PALS Merit</h3>
+        <p>Awarded Certificate of Merit by IBM India Research Lab & PALS (IIT Alumni initiative) for LLM Systems.</p>
+      </div>
+      <div class="highlight-card">
+        <div class="icon"><i class="fas fa-university"></i></div>
+        <h3>IIT Madras Recognition</h3>
+        <p>Certificate of Appreciation as SPOC for the IIT Madras School Connect Program.</p>
+      </div>
+      <div class="highlight-card">
+        <div class="icon"><i class="fas fa-cogs"></i></div>
+        <h3>Full Product Suite</h3>
+        <p>Built 7+ products from scratch — AI, POS, CRM, ERP, Cloud, Office suite, Invoicing — serving real businesses.</p>
+      </div>
+      <div class="highlight-card">
+        <div class="icon"><i class="fas fa-trophy"></i></div>
+        <h3>Best Business Video</h3>
+        <p>Won Best Business Video award at Rotary Club & Punch Gurukulam training program 53.0 (2025).</p>
+      </div>
+      <div class="highlight-card">
+        <div class="icon"><i class="fas fa-handshake"></i></div>
+        <h3>Tech Support Pro</h3>
+        <p>Worked as Technical Support Specialist at RMK Associates, gaining enterprise IT and client management experience.</p>
+      </div>
+      <div class="highlight-card">
+        <div class="icon"><i class="fas fa-certificate"></i></div>
+        <h3>10+ Certifications</h3>
+        <p>GIAC Software Cyber Security, 4 Forage job simulations (JPMorgan, Tata, CommBank, Deloitte), IBM & IIT Madras recognition, and more.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background: #ffffff;">
+  <div class="container">
+    <div class="section-title fade-in">
+      <h2>Featured Projects</h2>
+      <p>Some of the products I've built</p>
+      <div class="line"></div>
+    </div>
+    <div class="featured-projects stagger-children">
+      <div class="fp-card">
+        <div class="icon"><i class="fas fa-robot"></i></div>
+        <h3>JAY AI</h3>
+        <p>AI-powered chatbot & automation platform. Built with Python and Google Gemini API. Intelligent customer service and business process automation for enterprises.</p>
+      </div>
+      <div class="fp-card">
+        <div class="icon"><i class="fas fa-cash-register"></i></div>
+        <h3>JAY POS</h3>
+        <p>Enterprise point-of-sale system with inventory management, billing, and real-time transaction tracking. Built with HTML, CSS, JavaScript & Electron.</p>
+      </div>
+      <div class="fp-card">
+        <div class="icon"><i class="fas fa-cloud"></i></div>
+        <h3>JAY CLOUD</h3>
+        <p>Scalable cloud platform offering infrastructure and storage solutions for businesses of all sizes.</p>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 2rem;">
+      <a href="projects.html" class="btn btn-outline">View All Projects <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section fade-in">
+  <div class="container">
+    <h2>Let's Connect</h2>
+    <p>I'm always open to new opportunities, collaborations, and conversations. Whether you have a project idea or just want to say hi.</p>
+    <a href="contact.html" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Get In Touch</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p>&copy; 2026 Aswin Jay. Built with <i class="fas fa-heart" style="color:var(--primary);"></i> from Kadayanallur, Tamil Nadu.</p>
+</footer>
+
+<button class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var nav = document.querySelector('nav');
+  var menuBtn = document.querySelector('.menu-toggle');
+  var navUl = document.querySelector('nav ul');
+  var backBtn = document.querySelector('.back-to-top');
+  var themeBtn = document.querySelector('.theme-toggle');
+  var html = document.documentElement;
+
+  if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    html.setAttribute('data-theme', 'dark');
+    if (themeBtn) themeBtn.innerHTML = '<i class="fas fa-sun"></i>';
+  }
+
+  if (themeBtn) {
+    themeBtn.addEventListener('click', function() {
+      var isDark = html.getAttribute('data-theme') === 'dark';
+      html.setAttribute('data-theme', isDark ? '' : 'dark');
+      localStorage.setItem('theme', isDark ? '' : 'dark');
+      themeBtn.innerHTML = isDark ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+    });
+  }
+
+  window.addEventListener('scroll', function() {
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+    backBtn.classList.toggle('visible', window.scrollY > 400);
+  });
+
+  if (backBtn) {
+    backBtn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  if (menuBtn) {
+    menuBtn.addEventListener('click', function() {
+      var isOpen = navUl.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', isOpen);
+      document.body.classList.toggle('nav-open', isOpen);
+    });
+  }
+
+  document.querySelectorAll('nav a:not(.theme-toggle)').forEach(function(link) {
+    link.addEventListener('click', function() {
+      navUl.classList.remove('open');
+      if (menuBtn) menuBtn.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('nav-open');
+    });
+  });
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right, .fade-in-scale, .stagger-children').forEach(function(el) {
+    observer.observe(el);
+  });
+
+  var typedEl = document.getElementById('typed-text');
+  if (typedEl) {
+    var phrases = [
+      'Building India\'s next-gen business software',
+      'Founder & CEO at JAY TECH SOLUTIONS',
+      'B.Tech CSBS student at Ramco Institute of Technology',
+      'Creator of JAY AI, JAY POS, JAY CRM, JAY ERP & more',
+      '15 when I started my company. 50K+ users by 20.'
+    ];
+    var phraseIdx = 0, charIdx = 0, isDeleting = false;
+    function typeLoop() {
+      var current = phrases[phraseIdx];
+      if (!isDeleting) {
+        typedEl.innerHTML = current.substring(0, charIdx + 1) + '<span class="cursor"></span>';
+        charIdx++;
+        if (charIdx === current.length) {
+          isDeleting = true;
+          setTimeout(typeLoop, 2500);
+          return;
+        }
+        setTimeout(typeLoop, 60 + Math.random() * 40);
+      } else {
+        typedEl.innerHTML = current.substring(0, charIdx - 1) + '<span class="cursor"></span>';
+        charIdx--;
+        if (charIdx === 0) {
+          isDeleting = false;
+          phraseIdx = (phraseIdx + 1) % phrases.length;
+          setTimeout(typeLoop, 400);
+          return;
+        }
+        setTimeout(typeLoop, 30 + Math.random() * 20);
+      }
+    }
+    typeLoop();
+  }
+
+  var counterObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var el = entry.target;
+        var target = parseInt(el.getAttribute('data-count'));
+        if (target > 0) {
+          var current = 0;
+          var step = Math.max(1, Math.floor(target / 60));
+          var interval = setInterval(function() {
+            current += step;
+            if (current >= target) {
+              current = target;
+              clearInterval(interval);
+            }
+            el.textContent = current >= 1000 ? (current / 1000).toFixed(1).replace(/\.0$/, '') + 'K+' : current;
+          }, 25);
+        }
+        counterObserver.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  document.querySelectorAll('.hero-quick-stats .num[data-count]').forEach(function(el) {
+    counterObserver.observe(el);
+  });
+});
+</script>
+</body>
+</html>
