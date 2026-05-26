@@ -19,7 +19,6 @@ DARK = (30, 39, 46)
 GRAY = (90, 101, 112)
 LIGHT_BG = (244, 246, 248)
 
-# HEADER
 pdf.set_fill_color(*TEAL)
 pdf.rect(0, 0, 210, 50, 'F')
 pdf.set_text_color(255,255,255)
@@ -33,7 +32,6 @@ pdf.set_font('Helvetica', '', 9)
 pdf.set_xy(20, 36)
 pdf.cell(0, 6, 'contact@jaytechsoln.in  |  Kadayanallur, Tamil Nadu  |  9003368894')
 
-# LEFT COLUMN
 left_x = 15
 right_x = 80
 col_w = 80
@@ -41,7 +39,6 @@ full_w = 180
 right_w = 115
 rx = 88
 
-# Left column background
 pdf.set_fill_color(*LIGHT_BG)
 pdf.rect(10, 50, 72, 238, 'F')
 
@@ -66,13 +63,12 @@ pdf.set_xy(14, y)
 pdf.multi_cell(65, 4, 'Kadayanallur,\nTenkasi District,\nTamil Nadu - 627806')
 y += 16
 pdf.set_xy(14, y)
-pdf.cell(65, 4, 'github.com/Aswinajay')
+pdf.cell(65, 4, 'github.com/jayaswinjay-web')
 y += 5
 pdf.set_xy(14, y)
 pdf.cell(65, 4, 'linkedin.com/in/aswinjay-m-543ba0390')
 y += 14
 
-# SUMMARY
 pdf.set_text_color(*TEAL)
 pdf.set_font('Helvetica', 'B', 10)
 pdf.set_xy(14, y)
@@ -85,12 +81,13 @@ pdf.set_xy(14, y)
 pdf.multi_cell(65, 3.8,
 'Student at Ramco Institute of Technology (CSBS) and '
 'Founder/CEO of JAY TECH SOLUTIONS since age 15. '
-'Built 7+ software products serving 50,000+ users across India. '
+'Built 11+ software products serving 50,000+ users across India. '
+'Experienced in full-stack development, AI/ML, systems programming, '
+'IoT, and embedded electronics. '
 'Recipient of IBM India Research Lab & PALS Certificate of Merit, '
 'and IIT Madras Certificate of Appreciation.')
 y += 36
 
-# SKILLS
 pdf.set_text_color(*TEAL)
 pdf.set_font('Helvetica', 'B', 10)
 pdf.set_xy(14, y)
@@ -99,10 +96,10 @@ pdf.line(14, y+7, 78, y+7)
 y += 14
 
 skills_data = [
-    ('Languages', 'Python, JavaScript, PHP, HTML/CSS, C,\nx86-64 Assembly, AK CODE (own language)'),
-    ('Frameworks', 'Next.js, Laravel, Electron, React, Node.js,\nGoogle Gemini API'),
-    ('Platforms', 'MySQL, Cloud Infrastructure, Linux,\nGit/GitHub, Windows API, NASM'),
-    ('Specialized', 'Compiler Design, OS Development,\nAI/ML Integration, Systems Programming,\nBusiness Software'),
+    ('Languages', 'Python, JavaScript, TypeScript, PHP,\nHTML/CSS, C, C#, x86-64 Assembly,\nAK CODE (own language)'),
+    ('Frameworks', 'Next.js, React, Laravel, Livewire,\nElectron, Node.js, WPF .NET,\nGoogle Gemini API, Prisma'),
+    ('Platforms', 'Go (Fiber), PostgreSQL, MySQL, Redis,\nCloudflare R2, Docker, Git/GitHub,\nLinux, Win32 API, NASM'),
+    ('Specialized', 'Compiler Design, IoT & Embedded Systems,\nAI/ML Integration, WebRTC,\nSystems Programming, Business Software,\nElectronics & Electrical'),
 ]
 for title, sk in skills_data:
     pdf.set_text_color(*DARK)
@@ -152,12 +149,12 @@ certs = [
     'IIT Madras - Certificate of Appreciation (SPOC)',
     'IBM India Research Lab & PALS - Certificate of Merit',
     'GIAC Software Cyber Security - ShikshaVertex (Mar 2026)',
-    'JPMorganChase - Software Engineering Job Simulation (Forage)',
-    'Tata - GenAI Powered Data Analytics Job Simulation (Forage)',
-    'Commonwealth Bank - Data Science Job Simulation (Forage)',
-    'Deloitte Australia - Cyber Job Simulation (Forage)',
+    'Best Business Video Award - Rotary Club (Nov 2025)',
     '3rd Prize - IEEE Ignite, Kalasalingam University',
-    'Best Business Video Award - Rotary Club',
+    'JPMorganChase - SWE Job Simulation (Forage)',
+    'Tata - GenAI Data Analytics Job Simulation (Forage)',
+    'CommBank - Data Science Job Simulation (Forage)',
+    'Deloitte Australia - Cyber Job Simulation (Forage)',
     'Udyam Registered MSME',
 ]
 for c in certs:
@@ -167,7 +164,6 @@ for c in certs:
     pdf.cell(62, 4, '- ' + c)
     y += 4.5
 
-# RIGHT COLUMN - EXPERIENCE
 ry = 58
 
 pdf.set_text_color(*TEAL)
@@ -202,9 +198,9 @@ def exp_item(title, meta, company, bullets, ry):
     return ry + 4
 
 ry = exp_item('Founder & CEO', '2020 - Present', 'JAY TECH SOLUTIONS', [
-    'Founded and scaled a business software company from scratch at age 15 while in class 11.',
-    'Designed, developed, and deployed 7+ software products serving 50,000+ users across India.',
-    'Built JAY AI (Gemini API chatbot), JAY POS (Electron), JAY CRM (Next.js), JAY ERP (Laravel), JAY CLOUD, JAY OFFICE, and Jay Invoicing.',
+    'Founded and scaled a business software company from scratch at age 15 (class 11).',
+    'Designed, developed, and deployed 11+ software products serving 50,000+ users across India.',
+    'Built JAY AI (Gemini API chatbot), JAY POS (React/Electron), JAY CRM (Next.js), JAY ERP (Laravel), JAY OFFICE (Turborepo suite), VAANJAY (Go/React Native social app), JayVibez (C# WPF music player), JAY LMS, JAY CLOUD, Jay Invoicing, Fake OS, and AK CODE programming language.',
     'Managed full product lifecycle: conception, architecture, development, deployment, and support.',
     'Registered as Udyam MSME - fully bootstrapped with zero external funding.',
 ], ry)
@@ -215,7 +211,6 @@ ry = exp_item('Technical Support Specialist', 'May 2024 - Feb 2025', 'RMK Associ
     'Developed strong problem-solving skills in a fast-paced professional environment.',
 ], ry)
 
-# KEY PROJECTS
 ry += 2
 pdf.set_text_color(*TEAL)
 pdf.set_font('Helvetica', 'B', 11)
@@ -226,28 +221,33 @@ pdf.line(rx, ry+8, rx+right_w, ry+8)
 ry += 16
 
 ry = exp_item('AK CODE - Programming Language', 'Ongoing', 'Personal Project', [
-    'Ground-up programming language with x86-64 assembly bootstrap compiler (NASM). Targets Linux ELF and Windows PE/COFF natively.',
+    'Ground-up programming language with x86-64 assembly bootstrap compiler (NASM). Targets Linux ELF and Windows PE/COFF.',
     'Natural English-like syntax with full standard library: AI/ML, web server, database, math, UI modules.',
     'Includes custom IDE (AK IDE) with multi-agent AI panel for code review, refactoring, testing.',
-    'Spec: 900+ lines, 100+ language features, 2 architecture targets.',
+    '37K+ lines of code, 100+ language features, 2 architecture targets.',
 ], ry)
 
-ry = exp_item('Fake OS - Windows Desktop Simulator', 'Ongoing', 'Personal Project', [
-    'Windows-like desktop environment simulator built in C using Win32 API.',
-    'Features gradient desktop rendering, taskbar, start menu, and window management via GDI.',
-    'Demonstrates low-level systems programming and Windows platform expertise.',
+ry = exp_item('VAANJAY - Social Media Super-App', 'Ongoing', 'Personal Project', [
+    'Production-ready social platform combining Instagram, WhatsApp, Facebook, Twitter for Tamil Nadu.',
+    'Built with Go (Fiber), React Native (Expo), Next.js 14, WebRTC, PostgreSQL, Redis, Cloudflare R2.',
+    'Features: reels, stories, live streams, DMs, group chats, audio/video calls, UPI payments, Tamil calendar.',
+], ry)
+
+ry = exp_item('JayVibez - Music Player', 'Ongoing', 'Personal Project', [
+    'WPF .NET 8 desktop music player with local library scanning and YouTube streaming via YoutubeExplode.',
+    'NAudio playback engine with playlist management, album art, shuffle/repeat, queue management.',
+    'Online/offline modes. Also available as an Android APK.',
 ], ry)
 
 ry = exp_item('JAY Product Suite', '2020 - Present', 'JAY TECH SOLUTIONS', [
     'JAY AI: AI chatbot & automation platform using Python and Google Gemini API.',
-    'JAY POS: Enterprise point-of-sale system with Electron, inventory management, billing.',
-    'JAY CRM: Next.js-based customer relationship management platform.',
-    'JAY ERP: Laravel-based enterprise resource planning system.',
+    'JAY POS: Enterprise point-of-sale with React, TypeScript, Electron, and Supabase.',
+    'JAY CRM: Next.js-based customer relationship management with Prisma ORM.',
+    'JAY ERP: Laravel-based ERP with 60+ modules and Anna AI assistant.',
+    'JAY OFFICE: Turborepo monorepo office suite (Docs, Sheets, Slides, Mail, Drive, Meet, Chat).',
     'JAY CLOUD: Scalable cloud infrastructure platform.',
-    'JAY OFFICE: Monorepo office productivity suite.',
 ], ry)
 
-# ACHIEVEMENTS
 ry += 2
 pdf.set_text_color(*TEAL)
 pdf.set_font('Helvetica', 'B', 11)
@@ -260,10 +260,11 @@ ry += 16
 pdf.set_text_color(*DARK)
 pdf.set_font('Helvetica', '', 8)
 achievements = [
-    'Awarded Certificate of Merit by IBM India Research Lab & PALS (IIT Alumni initiative) for LLM Systems (2024)',
+    'Awarded Certificate of Merit by IBM India Research Lab & PALS (IIT Alumni) for LLM Systems (2024)',
     'Certificate of Appreciation from IIT Madras as SPOC for the School Connect Program',
     '3rd Prize (Second Runner-Up) - IEEE Ignite, Kalasalingam University (cash prize INR 2,500)',
     'Best Business Video Award - Rotary Club of Virudhunagar & Punch Gurukulam Training Program 53.0 (2025)',
+    'GIAC Software Cyber Security certification - ShikshaVertex (Mar 2026)',
     'Udyam Registered MSME - JAY TECH SOLUTIONS (Govt. of India)',
 ]
 for a in achievements:
@@ -276,5 +277,5 @@ pdf.set_font('Helvetica', 'I', 7.5)
 pdf.set_xy(rx, ry+6)
 pdf.cell(right_w, 4, 'Available for remote collaboration worldwide.')
 
-pdf.output('D:/weki pidea/resume.pdf')
-print('PDF generated: D:/weki pidea/resume.pdf')
+pdf.output('D:/github-projects/jayaswinjay-web.github.io/resume.pdf')
+print('PDF generated: resume.pdf')
