@@ -202,41 +202,23 @@
     </div>
 
     <!-- ============================================================== -->
-    <!--  PODCAST VIDEO — placeholder ZONE (add your video here later)  -->
-    <!--                                                                -->
-    <!--  OPTION 1 — Local video file:                                  -->
-    <!--   1. Create a "videos" folder and put your file in it,         -->
-    <!--      e.g.  videos/podcast.mp4                                  -->
-    <!--   2. Delete the <div class="video-placeholder"> ... </div>     -->
-    <!--      block below.                                              -->
-    <!--   3. Uncomment the <video> block below.                        -->
-    <!--                                                                -->
-    <!--  OPTION 2 — YouTube link (best for large files):               -->
-    <!--   Delete the placeholder block and uncomment the <iframe>      -->
-    <!--   block, replacing VIDEO_ID with the YouTube video ID.         -->
-    <!-- ============================================================== -->
+    <!--  PODCAST VIDEO — OneDrive player                                -->
+    <!--  The video streams from OneDrive (uploaded, "anyone with link    -->
+    <!--  can view"), so the heavy file is NOT stored in this repo.       -->
+    <!-- ================================================================ -->
 
     <div class="video-frame">
-      <!-- <video class="video-player" controls preload="metadata">
-        <source src="videos/podcast.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
-      </video> -->
-
-      <!-- <iframe class="video-player" src="https://www.youtube.com/embed/VIDEO_ID"
-        title="Professional English Podcast" allow="accelerometer; autoplay; clipboard-write;
-        encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-
-      <div class="video-placeholder">
-        <div class="play-ring" aria-hidden="true"></div>
-        <h3>Podcast video coming soon</h3>
-        <p>The episode video will be played right here. Stay tuned!</p>
-      </div>
+      <iframe class="video-player"
+        src="https://onedrive.live.com/embed?resid=3ACE141DAFE25D65%21sb947987bb30945f9a330376c5c36b59b&redeem=aHR0cHM6Ly8xZHJ2Lm1zL3YvYy8zQUNFMTQxREFGRTI1RDY1L0lRQjdtRWU1Q2JQNVJhTXdOMnhjTnJXYkFZa2JmMGx0aHlVRFZrRGp0SnhwbWNJP2U9aEJLTWt4"
+        title="Professional English Podcast"
+        allow="autoplay; encrypted-media"
+        allowfullscreen></iframe>
     </div>
     <!-- ============ END OF PODCAST VIDEO ZONE ============ -->
 
     <div class="podcast-note">
       <i class="fas fa-circle-info"></i>
-      <p>More episodes will be added here over time — each one focuses on sharpening spoken and written professional English.</p>
+      <p>Preview not loading? <a href="https://1drv.ms/v/c/3ACE141DAFE25D65/IQB7mEe5CbP5RaMwN2xcNrWbAYkbf0lthyUDVkDjtJxpmcI?e=hBKMkx" target="_blank" rel="noopener" style="color:var(--primary);font-weight:600;">Watch the video directly on OneDrive</a>. More episodes will be added here over time — each one focuses on sharpening spoken and written professional English.</p>
     </div>
   </div>
 </section>
